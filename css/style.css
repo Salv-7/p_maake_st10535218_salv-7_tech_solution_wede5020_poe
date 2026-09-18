@@ -1,9 +1,3 @@
-
-/* ========================================
-   STS7 TECH SOLUTIONS
-   Part 2 - CSS Styling
-   ======================================== */
-
 /* I reset these first so the pages start from the same base in different browsers. */
 * {
     box-sizing: border-box;
@@ -25,7 +19,6 @@
     --shadow: 0 10px 28px rgba(11, 31, 51, 0.08);
     --max-width: 1180px;
 }
-
 /* Smooth scrolling supports the simple navigation and keeps page movement natural. */
 html {
     scroll-behavior: smooth;
@@ -71,10 +64,9 @@ textarea {
 .narrow {
     max-width: 900px;
 }
-
-/* =============================
+/*
    HEADER AND NAVIGATION
-   ============================= */
+  */
 
 /* The dark navy header is the main brand colour used throughout the website. */
 .site-header {
