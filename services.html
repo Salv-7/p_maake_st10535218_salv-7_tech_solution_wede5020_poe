@@ -1,163 +1,225 @@
 <!DOCTYPE html>
-<html>
+
+<!-- DOCTYPE refers to the document type declaration -->
+
+<html lang="en">
 
 <head>
-    <!-- Head contains meta information and the page title -->
-    <title>Salv-7 Tech Solutions</title>
+
+    <!-- Head contains information about the webpage -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Salv-7 Tech Solutions | Services</title>
 
     <!-- External CSS stylesheet -->
+
     <link rel="stylesheet" href="css/style.css">
+
 </head>
+
 
 <body>
 
+    <!-- HEADER -->
+
     <header>
 
-        <div>
+        <!-- Header represents the top section of the website -->
+
+        <div class="header-container">
+
             <h1>STS7</h1>
+
         </div>
 
+
+        <!-- NAVIGATION -->
+
         <nav>
+
+            <!-- Nav contains the navigation links -->
+
             <ul>
+
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="index.html">
+                        Home
+                    </a>
                 </li>
 
                 <li>
-                    <a href="about.html">About Us</a>
+                    <a href="about.html">
+                        About Us
+                    </a>
                 </li>
 
                 <li>
-                    <a href="services.html">Services</a>
+                    <a href="services.html" class="active">
+                        Services
+                    </a>
                 </li>
 
                 <li>
-                    <a href="projects.html">Previous Projects</a>
+                    <a href="projects.html">
+                        Previous Projects
+                    </a>
                 </li>
 
                 <li>
-                    <a href="enquiry.html">Enquiry</a>
+                    <a href="enquiry.html">
+                        Enquiry
+                    </a>
                 </li>
 
                 <li>
-                    <a href="contact.html">Contact Us</a>
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
                 </li>
+
             </ul>
+
         </nav>
 
     </header>
 
 
+    <!-- MAIN CONTENT -->
+
     <main>
 
-        <section id="services-introduction">
+
+        <!-- PAGE TITLE -->
+
+        <section class="page-title">
+
             <h2>Our Services</h2>
 
             <p>
-                STS7 provides a range of technology solutions designed
-                to meet the needs of individuals, businesses, start-ups
-                and local organisations.
+                Technology solutions for individuals and businesses.
             </p>
+
         </section>
 
 
-        <section id="website-development">
-            <img src="images/service-website-development.jpg" alt="Website development service">
-            <div>
-                <h3>Website Development</h3>
+        <!-- SERVICES -->
 
-                <p>
-                    We create professional and user-friendly websites
-                    for individuals and businesses.
-                </p>
+        <section class="page-section">
 
-                <a href="enquiry.html">Request a Quote</a>
+            <h2>Technology Services</h2>
+
+            <div class="service-list">
+
+
+                <div class="service-item">
+
+                    <h3>Website Development</h3>
+
+                    <p>
+                        We create modern websites for individuals,
+                        small businesses, start-ups and local
+                        organisations.
+                    </p>
+
+                </div>
+
+
+                <div class="service-item">
+
+                    <h3>Software Development</h3>
+
+                    <p>
+                        We develop software solutions designed
+                        to support business needs.
+                    </p>
+
+                </div>
+
+
+                <div class="service-item">
+
+                    <h3>IT Support</h3>
+
+                    <p>
+                        We provide technology support to help
+                        customers address their IT requirements.
+                    </p>
+
+                </div>
+
+
+                <div class="service-item">
+
+                    <h3>Computer Repairs</h3>
+
+                    <p>
+                        We provide computer troubleshooting
+                        and repair services.
+                    </p>
+
+                </div>
+
+
+                <div class="service-item">
+
+                    <h3>Networking Services</h3>
+
+                    <p>
+                        We provide networking solutions for
+                        local businesses.
+                    </p>
+
+                </div>
+
+
             </div>
+
         </section>
 
 
-        <section id="software-development">
-            <img src="images/service-software-development.jpg" alt="Software development service">
-            <div>
-                <h3>Software Development</h3>
+        <!-- CALL TO ACTION -->
 
-                <p>
-                    We develop software solutions designed to support
-                    specific business and organisational needs.
-                </p>
+        <section class="call-to-action">
 
-                <a href="enquiry.html">Request a Quote</a>
-            </div>
-        </section>
+            <h2>
+                Need one of our services?
+            </h2>
 
+            <p>
+                Tell us what you need and request a quotation.
+            </p>
 
-        <section id="computer-repairs">
-            <img src="images/service-computer-repairs.jpg" alt="Computer repair service">
-            <div>
-                <h3>Computer Repairs</h3>
+            <a href="enquiry.html" class="button">
+                Request a Quote
+            </a>
 
-                <p>
-                    We provide computer troubleshooting, maintenance
-                    and repair services.
-                </p>
-
-                <a href="enquiry.html">Request a Quote</a>
-            </div>
-        </section>
-
-
-        <section id="networking">
-            <img src="images/service-networking.jpg" alt="Networking service">
-            <div>
-                <h3>Networking</h3>
-
-                <p>
-                    We provide networking solutions to help businesses
-                    connect their devices and systems effectively.
-                </p>
-
-                <a href="enquiry.html">Request a Quote</a>
-            </div>
-        </section>
-
-
-        <section id="it-support">
-            <img src="images/service-it-support.jpg" alt="IT support service">
-            <div>
-                <h3>IT Support</h3>
-
-                <p>
-                    We provide technical support to help users resolve
-                    technology-related problems.
-                </p>
-
-                <a href="enquiry.html">Request a Quote</a>
-            </div>
-        </section>
-
-
-        <section id="technology-consulting">
-            <img src="images/service-tech-consulting.jpg" alt="Technology consulting service">
-            <div>
-                <h3>Technology Consulting</h3>
-
-                <p>
-                    We provide professional technology guidance to help
-                    clients choose suitable technology solutions.
-                </p>
-
-                <a href="enquiry.html">Request a Quote</a>
-            </div>
         </section>
 
     </main>
 
 
-    <footer>
-        <p>Salv-7 Tech Solutions</p>
+    <!-- FOOTER -->
 
-        <p>&copy; 2026 Salv-7 Tech Solutions</p>
+    <footer>
+
+        <p>
+            Salv-7 Tech Solutions
+        </p>
+
+        <p>
+            Email: info@salv7techsolutions.co.za
+        </p>
+
+        <p>
+            &copy; 2026 Salv-7 Tech Solutions
+        </p>
+
     </footer>
+
 
 </body>
 
