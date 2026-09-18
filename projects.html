@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<!-- Previous/sample projects page for STS7. -->
+<!-- Previous and sample projects page for STS7. -->
 <html lang="en">
 <head>
+    <!-- Basic page information and the shared external stylesheet. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="View previous and sample website, software and networking projects from Salv-7 Tech Solutions.">
     <title>Previous Projects | Salv-7 Tech Solutions</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+    <!-- The same header and navigation are used on every page for consistency. -->
     <header class="site-header">
         <div class="container header-inner">
             <a class="logo" href="index.html" aria-label="STS7 Tech Solutions Home">
                 <span class="logo-main">STS7</span>
                 <span class="logo-sub">TECH SOLUTIONS</span>
             </a>
+
             <nav class="main-nav" aria-label="Main navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -29,40 +33,60 @@
     </header>
 
     <main>
+
+        <!-- The page banner introduces the portfolio. -->
         <section class="page-hero">
             <div class="container">
+                <p class="eyebrow">PORTFOLIO</p>
                 <h1>Previous Projects</h1>
                 <p>Examples of websites, software and networking solutions.</p>
             </div>
         </section>
 
+        <!-- Each project has an image so the portfolio is visually clear rather than text-only. -->
         <section class="section">
             <div class="container">
                 <div class="section-heading">
+                    <p class="eyebrow dark">PROJECT EXAMPLES</p>
                     <h2>Our Project Examples</h2>
                     <p>These examples show the types of technology solutions STS7 can provide.</p>
                 </div>
 
-                <div class="card-grid">
+                <div class="card-grid two-columns project-grid">
                     <article class="card project-card">
-                        <img src="images/project-barber-shop.jpg" alt="Barber shop website project">
-                        <div class="project-card-content">
+                        <img class="card-image" src="images/project-barber-shop.jpg" alt="Barber shop website project">
+                        <div class="card-body">
                             <h3>Barber Shop Website</h3>
                             <p>Website development with online enquiry functionality and responsive design.</p>
                             <a class="btn btn-primary" href="enquiry.html">Enquire About a Website</a>
                         </div>
                     </article>
 
-                    <article class="card">
-                        <h3>Small Business Inventory System</h3>
-                        <p>A sample software solution designed to help a small business manage inventory and keep track of products.</p>
-                        <a class="btn btn-primary" href="enquiry.html">Enquire About Software</a>
+                    <article class="card project-card">
+                        <img class="card-image" src="images/project-inventory-system.jpg" alt="Small business inventory system project">
+                        <div class="card-body">
+                            <h3>Small Business Inventory System</h3>
+                            <p>A sample software solution designed to help a small business manage inventory and keep track of products.</p>
+                            <a class="btn btn-primary" href="enquiry.html">Enquire About Software</a>
+                        </div>
                     </article>
 
-                    <article class="card">
-                        <h3>Local Business Network Setup</h3>
-                        <p>A sample networking solution designed to support connectivity for a local business.</p>
-                        <a class="btn btn-primary" href="enquiry.html">Enquire About Networking</a>
+                    <article class="card project-card">
+                        <img class="card-image" src="images/project-network-setup.jpg" alt="Local business network setup project">
+                        <div class="card-body">
+                            <h3>Local Business Network Setup</h3>
+                            <p>A sample networking solution designed to support connectivity for a local business.</p>
+                            <a class="btn btn-primary" href="enquiry.html">Enquire About Networking</a>
+                        </div>
+                    </article>
+
+                    <article class="card project-card">
+                        <img class="card-image" src="images/project-generic.jpg" alt="General technology project">
+                        <div class="card-body">
+                            <h3>General Technology Project</h3>
+                            <p>A general project example showing how STS7 can combine different technology services around a client's requirements.</p>
+                            <a class="btn btn-primary" href="enquiry.html">Discuss a Project</a>
+                        </div>
                     </article>
                 </div>
             </div>
@@ -71,6 +95,7 @@
         <section class="section section-light">
             <div class="container">
                 <div class="section-heading">
+                    <p class="eyebrow dark">START YOUR PROJECT</p>
                     <h2>Have a similar project?</h2>
                     <p>Contact STS7 to discuss your requirements and request a quotation.</p>
                 </div>
@@ -79,12 +104,26 @@
                 </div>
             </div>
         </section>
+
     </main>
 
+    <!-- The footer provides the main contact detail and copyright information. -->
     <footer class="site-footer">
-        <div class="container">
-            <p><strong>Salv-7 Tech Solutions</strong></p>
-            <p>Email: <a href="mailto:info@salv7techsolutions.co.za">info@salv7techsolutions.co.za</a></p>
+        <div class="container footer-inner">
+            <div>
+                <p class="footer-brand">Salv-7 Tech Solutions</p>
+                <p>Reliable technology solutions for individuals and businesses.</p>
+            </div>
+            <div>
+                <p><strong>Email</strong></p>
+                <p><a href="mailto:info@salv7techsolutions.co.za">info@salv7techsolutions.co.za</a></p>
+            </div>
+            <div>
+                <p><strong>Location</strong></p>
+                <p>Tzaneen, Limpopo, South Africa</p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
             <p>&copy; 2026 Salv-7 Tech Solutions. All rights reserved.</p>
         </div>
     </footer>
