@@ -224,19 +224,33 @@ Salv-7 Tech Solutions (STS7)
 
 ## Folder Structure
 
-Salv-7 Tech Solutions
+P_MAAKE_ST10535218_SALV-7_TECH_SOLUTION...
+│
+├── css
+│   └── style.css
+│
+├── images
+│   ├── home-hero.jpg
+│   ├── about-team.jpg
+│   ├── service-website-development.jpg
+│   ├── service-software-development.jpg
+│   ├── service-computer-repairs.jpg
+│   ├── service-networking.jpg
+│   ├── service-it-support.jpg
+│   ├── service-tech-consulting.jpg
+│   ├── project-barber-shop.jpg
+│   ├── project-inventory-system.jpg
+│   ├── project-network-setup.jpg
+│   └── project-generic.jpg
+│
+├── js
 │
 ├── index.html
 ├── about.html
 ├── services.html
 ├── projects.html
 ├── enquiry.html
-├── contact.html
-├── README.md
-│
-├── css/
-├── images/
-└── js/
+└── contact.html
 
 ## Changelog
 
