@@ -270,9 +270,6 @@ P_MAAKE_ST10535218_SALV-7_TECH_SOLUTION...
 ├── contact.html
 └── README.md
 ```
-
-The `js` folder is reserved for future JavaScript functionality. JavaScript development is part of a later development stage and is not presented as completed work in the current stage.
-
 ---
 
 # Development Approach
@@ -353,27 +350,6 @@ The CSS uses responsive layout techniques and media queries to adapt the page st
 
 ---
 
-# Responsive Design Evidence
-
-Screenshots are included with the project submission to demonstrate the website at different screen sizes.
-
-The screenshots should show:
-
-### Desktop
-
-The full website layout at a desktop or laptop viewport, including the navigation, content sections, images and footer.
-
-### Tablet
-
-The website at a tablet-sized viewport, showing how the layout adjusts to a narrower screen.
-
-### Mobile
-
-The website at a mobile-sized viewport, showing how the navigation, content, images, cards and forms adapt to a smaller screen.
-
-These screenshots provide evidence that the website was tested across different screen sizes.
-
----
 
 # Accessibility
 
