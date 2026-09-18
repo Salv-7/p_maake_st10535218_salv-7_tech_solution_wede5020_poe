@@ -1,199 +1,92 @@
 <!DOCTYPE html>
-
-<!-- DOCTYPE refers to the document type declaration -->
-
+<!-- Previous/sample projects page for STS7. -->
 <html lang="en">
-
 <head>
-
-    <!-- Head contains information about the webpage -->
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Salv-7 Tech Solutions | Previous Projects</title>
-
-    <!-- External CSS stylesheet -->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View previous and sample website, software and networking projects from Salv-7 Tech Solutions.">
+    <title>Previous Projects | Salv-7 Tech Solutions</title>
     <link rel="stylesheet" href="css/style.css">
-
 </head>
-
-
 <body>
-
-    <!-- HEADER -->
-
-    <header>
-
-        <div class="header-container">
-
-            <h1>STS7</h1>
-
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html" aria-label="STS7 Tech Solutions Home">
+                <span class="logo-main">STS7</span>
+                <span class="logo-sub">TECH SOLUTIONS</span>
+            </a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a class="active" href="projects.html" aria-current="page">Previous Projects</a></li>
+                    <li><a href="enquiry.html">Request a Quote</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
-
-
-        <!-- NAVIGATION -->
-
-        <nav>
-
-            <ul>
-
-                <li>
-                    <a href="index.html">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="about.html">
-                        About Us
-                    </a>
-                </li>
-
-                <li>
-                    <a href="services.html">
-                        Services
-                    </a>
-                </li>
-
-                <li>
-                    <a href="projects.html" class="active">
-                        Previous Projects
-                    </a>
-                </li>
-
-                <li>
-                    <a href="enquiry.html">
-                        Enquiry
-                    </a>
-                </li>
-
-                <li>
-                    <a href="contact.html">
-                        Contact Us
-                    </a>
-                </li>
-
-            </ul>
-
-        </nav>
-
     </header>
 
-
-    <!-- MAIN CONTENT -->
-
     <main>
-
-
-        <!-- PAGE TITLE -->
-
-        <section class="page-title">
-
-            <h2>Previous Projects</h2>
-
-            <p>
-                Examples of technology projects provided by STS7.
-            </p>
-
+        <section class="page-hero">
+            <div class="container">
+                <h1>Previous Projects</h1>
+                <p>Examples of websites, software and networking solutions.</p>
+            </div>
         </section>
 
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Our Project Examples</h2>
+                    <p>These examples show the types of technology solutions STS7 can provide.</p>
+                </div>
 
-        <!-- PROJECTS -->
+                <div class="card-grid">
+                    <article class="card project-card">
+                        <img src="images/project-barber-shop.jpg" alt="Barber shop website project">
+                        <div class="project-card-content">
+                            <h3>Barber Shop Website</h3>
+                            <p>Website development with online enquiry functionality and responsive design.</p>
+                            <a class="btn btn-primary" href="enquiry.html">Enquire About a Website</a>
+                        </div>
+                    </article>
 
-        <section class="page-section">
+                    <article class="card">
+                        <h3>Small Business Inventory System</h3>
+                        <p>A sample software solution designed to help a small business manage inventory and keep track of products.</p>
+                        <a class="btn btn-primary" href="enquiry.html">Enquire About Software</a>
+                    </article>
 
-
-            <img
-                src="images/project-barber-shop.jpg"
-                alt="Sample barber shop website project"
-                class="section-image"
-            >
-
-
-            <div class="project-card">
-
-                <h3>Barber Shop Website</h3>
-
-                <p>
-                    Website development with online enquiry
-                    functionality.
-                </p>
-
+                    <article class="card">
+                        <h3>Local Business Network Setup</h3>
+                        <p>A sample networking solution designed to support connectivity for a local business.</p>
+                        <a class="btn btn-primary" href="enquiry.html">Enquire About Networking</a>
+                    </article>
+                </div>
             </div>
-
-
-            <div class="project-card">
-
-                <h3>Small Business Inventory System</h3>
-
-                <p>
-                    A software solution designed to help
-                    manage inventory.
-                </p>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <h3>Local Business Network Setup</h3>
-
-                <p>
-                    A sample networking solution for a
-                    local business.
-                </p>
-
-            </div>
-
-
         </section>
 
-
-        <!-- CALL TO ACTION -->
-
-        <section class="call-to-action">
-
-            <h2>
-                Have a project in mind?
-            </h2>
-
-            <p>
-                Contact STS7 to discuss your technology
-                requirements.
-            </p>
-
-            <a href="enquiry.html" class="button">
-                Make an Enquiry
-            </a>
-
+        <section class="section section-light">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Have a similar project?</h2>
+                    <p>Contact STS7 to discuss your requirements and request a quotation.</p>
+                </div>
+                <div class="text-center">
+                    <a class="btn btn-primary" href="enquiry.html">Request a Quote</a>
+                </div>
+            </div>
         </section>
-
     </main>
 
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <p>
-            Salv-7 Tech Solutions
-        </p>
-
-        <p>
-            Email: info@salv7techsolutions.co.za
-        </p>
-
-        <p>
-            &copy; 2026 Salv-7 Tech Solutions
-        </p>
-
+    <footer class="site-footer">
+        <div class="container">
+            <p><strong>Salv-7 Tech Solutions</strong></p>
+            <p>Email: <a href="mailto:info@salv7techsolutions.co.za">info@salv7techsolutions.co.za</a></p>
+            <p>&copy; 2026 Salv-7 Tech Solutions. All rights reserved.</p>
+        </div>
     </footer>
-
-
 </body>
-
 </html>
