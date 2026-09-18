@@ -1,251 +1,103 @@
 <!DOCTYPE html>
-
-<!-- DOCTYPE refers to the document type declaration -->
-
+<!-- Quote/enquiry form for visitors who want to ask about an STS7 service. -->
 <html lang="en">
-
 <head>
-
-    <!-- Head contains information about the webpage -->
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Salv-7 Tech Solutions | Enquiry</title>
-
-    <!-- External CSS stylesheet -->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Request a quotation from Salv-7 Tech Solutions for website, software, repair, networking or IT services.">
+    <title>Request a Quote | Salv-7 Tech Solutions</title>
     <link rel="stylesheet" href="css/style.css">
-
 </head>
-
-
 <body>
-
-    <!-- HEADER -->
-
-    <header>
-
-        <div class="header-container">
-
-            <h1>STS7</h1>
-
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html" aria-label="STS7 Tech Solutions Home">
+                <span class="logo-main">STS7</span>
+                <span class="logo-sub">TECH SOLUTIONS</span>
+            </a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Previous Projects</a></li>
+                    <li><a class="active" href="enquiry.html" aria-current="page">Request a Quote</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
-
-
-        <!-- NAVIGATION -->
-
-        <nav>
-
-            <ul>
-
-                <li>
-                    <a href="index.html">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="about.html">
-                        About Us
-                    </a>
-                </li>
-
-                <li>
-                    <a href="services.html">
-                        Services
-                    </a>
-                </li>
-
-                <li>
-                    <a href="projects.html">
-                        Previous Projects
-                    </a>
-                </li>
-
-                <li>
-                    <a href="enquiry.html" class="active">
-                        Enquiry
-                    </a>
-                </li>
-
-                <li>
-                    <a href="contact.html">
-                        Contact Us
-                    </a>
-                </li>
-
-            </ul>
-
-        </nav>
-
     </header>
 
-
-    <!-- MAIN CONTENT -->
-
     <main>
-
-
-        <!-- PAGE TITLE -->
-
-        <section class="page-title">
-
-            <h2>Request a Quote</h2>
-
-            <p>
-                Tell us about your technology requirements.
-            </p>
-
-        </section>
-
-
-        <!-- ENQUIRY FORM -->
-
-        <section class="page-section">
-
-            <div class="form-container">
-
-                <form>
-
-
-                    <!-- Name -->
-
-                    <div class="form-group">
-
-                        <label for="name">
-                            Full Name
-                        </label>
-
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            required
-                        >
-
-                    </div>
-
-
-                    <!-- Email -->
-
-                    <div class="form-group">
-
-                        <label for="email">
-                            Email Address
-                        </label>
-
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            required
-                        >
-
-                    </div>
-
-
-                    <!-- Service -->
-
-                    <div class="form-group">
-
-                        <label for="service">
-                            Service Required
-                        </label>
-
-                        <select
-                            id="service"
-                            name="service"
-                            required
-                        >
-
-                            <option value="">
-                                Select a service
-                            </option>
-
-                            <option value="website-development">
-                                Website Development
-                            </option>
-
-                            <option value="software-development">
-                                Software Development
-                            </option>
-
-                            <option value="it-support">
-                                IT Support
-                            </option>
-
-                            <option value="computer-repairs">
-                                Computer Repairs
-                            </option>
-
-                            <option value="networking">
-                                Networking Services
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <!-- Project details -->
-
-                    <div class="form-group">
-
-                        <label for="message">
-                            Project Details
-                        </label>
-
-                        <textarea
-                            id="message"
-                            name="message"
-                            placeholder="Tell us what you need..."
-                            required
-                        ></textarea>
-
-                    </div>
-
-
-                    <!-- Submit button -->
-
-                    <button
-                        type="submit"
-                        class="button form-button"
-                    >
-                        Submit Enquiry
-                    </button>
-
-
-                </form>
-
+        <section class="page-hero">
+            <div class="container">
+                <h1>Request a Quote</h1>
+                <p>Tell us about your technology requirements.</p>
             </div>
-
         </section>
 
+        <section class="section section-light">
+            <div class="container">
+                <div class="form-wrapper">
+                    <div class="section-heading">
+                        <h2>Tell Us What You Need</h2>
+                        <p>Complete the form below with enough information for STS7 to understand your project.</p>
+                    </div>
+
+                    <form action="#" method="post">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" autocomplete="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" autocomplete="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" autocomplete="tel">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="service">Service Required</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Select a service</option>
+                                    <option value="website-development">Website Development</option>
+                                    <option value="software-development">Software Development</option>
+                                    <option value="computer-repairs">Computer Repairs</option>
+                                    <option value="networking">Networking</option>
+                                    <option value="it-support">IT Support</option>
+                                    <option value="technology-consulting">Technology Consulting</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group full">
+                                <label for="message">Project Details</label>
+                                <textarea id="message" name="message" required placeholder="Tell us what you need..."></textarea>
+                            </div>
+
+                            <div class="form-group full">
+                                <button class="btn btn-primary" type="submit">Submit Enquiry</button>
+                            </div>
+                        </div>
+
+                        <p class="form-note">This front-end form is ready for connection to a secure form-processing service when the website is deployed.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <p>
-            Salv-7 Tech Solutions
-        </p>
-
-        <p>
-            Email: info@salv7techsolutions.co.za
-        </p>
-
-        <p>
-            &copy; 2026 Salv-7 Tech Solutions
-        </p>
-
+    <footer class="site-footer">
+        <div class="container">
+            <p><strong>Salv-7 Tech Solutions</strong></p>
+            <p>Email: <a href="mailto:info@salv7techsolutions.co.za">info@salv7techsolutions.co.za</a></p>
+            <p>&copy; 2026 Salv-7 Tech Solutions. All rights reserved.</p>
+        </div>
     </footer>
-
-
 </body>
-
 </html>
