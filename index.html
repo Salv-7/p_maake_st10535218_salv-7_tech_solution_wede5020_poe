@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<!-- This is the home page for the STS7 website. -->
+<!-- Home page for STS7. -->
 <html lang="en">
 <head>
+    <!-- Basic page information and the shared external stylesheet. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Salv-7 Tech Solutions provides affordable and reliable technology solutions for individuals and businesses in Tzaneen.">
@@ -10,7 +11,7 @@
 </head>
 
 <body>
-    <!-- The header stays the same across the website so the user can move around easily. -->
+    <!-- The same header and navigation are used on every page for consistency. -->
     <header class="site-header">
         <div class="container header-inner">
             <a class="logo" href="index.html" aria-label="STS7 Tech Solutions Home">
@@ -32,13 +33,19 @@
     </header>
 
     <main>
-        <!-- Main hero area from the proposed homepage wireframe. -->
+
+        <!-- The hero follows the homepage wireframe: image, main message and clear call to action. -->
         <section class="hero">
-            <img class="hero-image" src="images/home-hero.jpg" alt="Technology workspace representing STS7 technology solutions">
+            <img class="hero-image"
+                 src="images/home-hero.jpg"
+                 srcset="images/home-hero.jpg 1600w"
+                 sizes="(max-width: 650px) 100vw, 100vw"
+                 alt="Technology workspace representing STS7 technology solutions">
             <div class="hero-overlay"></div>
 
-            <div class="hero-content">
+            <div class="container hero-content">
                 <div class="hero-copy">
+                    <p class="eyebrow">STS7 TECH SOLUTIONS</p>
                     <h1>Technology Solutions That Work For You</h1>
                     <p>STS7 provides reliable, affordable and customer-focused technology solutions for individuals and businesses.</p>
 
@@ -50,52 +57,70 @@
             </div>
         </section>
 
-        <!-- Short introduction before visitors get to the service information. -->
+        <!-- A short introduction gives visitors context before the service cards. -->
         <section class="section intro">
-            <div class="container">
+            <div class="container narrow">
                 <div class="section-heading">
+                    <p class="eyebrow dark">ABOUT STS7</p>
                     <h2>Welcome to STS7</h2>
                     <p>Salv-7 Tech Solutions provides professional technology solutions designed to meet the needs of individuals, small businesses, start-ups and local organisations.</p>
                 </div>
             </div>
         </section>
 
-        <!-- The image and text are placed side by side on desktop and stack on smaller screens. -->
+        <!-- This feature section uses one of the researched service images as visual support. -->
         <section class="section section-light">
-            <div class="container">
-                <div class="feature">
-                    <img class="feature-image" src="images/service-website-development.jpg" alt="Website development project displayed on a computer">
+            <div class="container feature">
+                <img class="feature-image"
+                     src="images/service-website-development.jpg"
+                     srcset="images/service-website-development.jpg 1200w"
+                     sizes="(max-width: 900px) 100vw, 50vw"
+                     alt="Website development project displayed on a computer">
 
-                    <div class="feature-content">
-                        <h2>Technology Built Around Your Needs</h2>
-                        <p>From websites and software development to computer repairs and networking support, STS7 focuses on practical solutions that support your goals.</p>
-                        <a class="btn btn-primary" href="services.html">Explore Our Services</a>
-                    </div>
+                <div class="feature-content">
+                    <p class="eyebrow dark">WHAT WE DO</p>
+                    <h2>Technology Built Around Your Needs</h2>
+                    <p>From websites and software development to computer repairs, networking and IT support, STS7 focuses on practical solutions that support your goals.</p>
+                    <a class="btn btn-primary" href="services.html">Explore Our Services</a>
                 </div>
             </div>
         </section>
 
+        <!-- The homepage shows a small preview while the Services page contains all six services. -->
         <section class="section">
             <div class="container">
                 <div class="section-heading">
-                    <h2>Our Services</h2>
-                    <p>Technology services designed for individuals and businesses.</p>
+                    <p class="eyebrow dark">OUR SERVICES</p>
+                    <h2>Technology Services</h2>
+                    <p>Solutions designed for individuals, small businesses, start-ups and local organisations.</p>
                 </div>
 
-                <div class="card-grid">
+                <div class="card-grid three-columns">
                     <article class="card service-card">
-                        <h3>Website Development</h3>
-                        <p>We create modern, responsive websites for individuals and businesses.</p>
+                        <img class="card-image" src="images/service-website-development.jpg" alt="Website development service">
+                        <div class="card-body">
+                            <h3>Website Development</h3>
+                            <p>Modern, responsive websites for individuals and businesses.</p>
+                            <a class="text-link" href="services.html">Learn more</a>
+                        </div>
                     </article>
 
                     <article class="card service-card">
-                        <h3>Software Development</h3>
-                        <p>We develop software solutions to support business needs and processes.</p>
+                        <img class="card-image" src="images/service-software-development.jpg" alt="Software development service">
+                        <div class="card-body">
+                            <h3>Software Development</h3>
+                            <p>Software solutions designed to support business needs and processes.</p>
+                            <a class="text-link" href="services.html">Learn more</a>
+                        </div>
                     </article>
 
                     <article class="card service-card">
-                        <h3>Computer Repairs</h3>
-                        <p>We provide computer troubleshooting and repair services.</p>
+                        <img class="card-image" src="images/service-computer-repairs.jpg" alt="Computer repair service">
+                        <div class="card-body">
+                            <h3>Computer Repairs</h3>
+                            <p>Troubleshooting and repair services for common hardware and software problems.</p>
+                            <a class="text-link" href="services.html">Learn more</a>
+                        </div>
                     </article>
                 </div>
 
@@ -105,10 +130,11 @@
             </div>
         </section>
 
-        <!-- These points are kept simple because they are part of the homepage preview. -->
+        <!-- These four reasons come directly from the planned homepage content. -->
         <section class="section section-light">
             <div class="container">
                 <div class="section-heading">
+                    <p class="eyebrow dark">WHY STS7</p>
                     <h2>Why Choose STS7?</h2>
                     <p>A straightforward approach to delivering useful technology solutions.</p>
                 </div>
@@ -122,31 +148,38 @@
             </div>
         </section>
 
-        <!-- Project preview links to the full Previous Projects page. -->
+        <!-- Project cards give the homepage a visual portfolio preview. -->
         <section class="section">
             <div class="container">
                 <div class="section-heading">
+                    <p class="eyebrow dark">PORTFOLIO</p>
                     <h2>Previous Projects</h2>
                     <p>Examples of technology solutions developed for different needs.</p>
                 </div>
 
-                <div class="card-grid">
+                <div class="card-grid three-columns">
                     <article class="card project-card">
-                        <img src="images/project-barber-shop.jpg" alt="Barber shop website project">
-                        <div class="project-card-content">
+                        <img class="card-image" src="images/project-barber-shop.jpg" alt="Barber shop website project">
+                        <div class="card-body">
                             <h3>Barber Shop Website</h3>
                             <p>Website development with online enquiry functionality.</p>
                         </div>
                     </article>
 
-                    <article class="card">
-                        <h3>Small Business Inventory System</h3>
-                        <p>A software solution designed to help manage inventory.</p>
+                    <article class="card project-card">
+                        <img class="card-image" src="images/project-inventory-system.jpg" alt="Small business inventory system project">
+                        <div class="card-body">
+                            <h3>Small Business Inventory System</h3>
+                            <p>A software solution designed to help manage inventory.</p>
+                        </div>
                     </article>
 
-                    <article class="card">
-                        <h3>Local Business Network Setup</h3>
-                        <p>A sample networking solution for a local business.</p>
+                    <article class="card project-card">
+                        <img class="card-image" src="images/project-network-setup.jpg" alt="Local business network setup project">
+                        <div class="card-body">
+                            <h3>Local Business Network Setup</h3>
+                            <p>A sample networking solution for a local business.</p>
+                        </div>
                     </article>
                 </div>
 
@@ -156,19 +189,35 @@
             </div>
         </section>
 
+        <!-- The final call to action leads visitors to the enquiry page. -->
         <section class="cta">
             <div class="container">
+                <p class="eyebrow">GET STARTED</p>
                 <h2>Have a technology project in mind?</h2>
                 <p>Tell us what you need and let STS7 help you find the right solution.</p>
                 <a class="btn btn-primary" href="enquiry.html">Make an Enquiry</a>
             </div>
         </section>
+
     </main>
 
+    <!-- The footer provides the main contact detail and copyright information. -->
     <footer class="site-footer">
-        <div class="container">
-            <p><strong>Salv-7 Tech Solutions</strong></p>
-            <p>Email: <a href="mailto:info@salv7techsolutions.co.za">info@salv7techsolutions.co.za</a></p>
+        <div class="container footer-inner">
+            <div>
+                <p class="footer-brand">Salv-7 Tech Solutions</p>
+                <p>Reliable technology solutions for individuals and businesses.</p>
+            </div>
+            <div>
+                <p><strong>Email</strong></p>
+                <p><a href="mailto:info@salv7techsolutions.co.za">info@salv7techsolutions.co.za</a></p>
+            </div>
+            <div>
+                <p><strong>Location</strong></p>
+                <p>Tzaneen, Limpopo, South Africa</p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
             <p>&copy; 2026 Salv-7 Tech Solutions. All rights reserved.</p>
         </div>
     </footer>
