@@ -1,1 +1,41 @@
-*
+/* ========================================
+   STS7 TECH SOLUTIONS
+   Part 2 - CSS Styling
+   ======================================== */
+
+/* CSS RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* BASE PAGE STYLES */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #232530;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE IMAGES */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* LINKS */
+a {
+    color: #003366;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
