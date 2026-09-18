@@ -39,3 +39,369 @@ a:hover,
 a:focus {
     text-decoration: underline;
 }
+/* HEADER */
+header {
+    background-color: #0b1f33;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+/* HEADER CONTAINER */
+header > div {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* WEBSITE TITLE */
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+/* NAVIGATION */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    display: block;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* NAVIGATION HOVER EFFECT */
+nav a:hover,
+nav a:focus {
+    background-color: #1f6feb;
+    text-decoration: none;
+}
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
+
+main {
+    width: 100%;
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+#hero-section {
+    position: relative;
+    min-height: 550px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    background-color: #0b1f33;
+}
+
+#hero-section > img {
+    position: absolute;
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    z-index: 1;
+}
+
+#hero-section > div {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 40px;
+    background-color: rgba(11, 31, 51, 0.55);
+    border-radius: 10px;
+}
+
+#hero-section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+#hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+#hero-section a {
+    display: inline-block;
+    background-color: #1f6feb;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#hero-section a:hover {
+    background-color: #1558b0;
+}
+
+
+/* ========================================
+   INTRODUCTION
+   ======================================== */
+
+#introduction {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#introduction h2 {
+    color: #0b1f33;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+#introduction p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   SERVICES PREVIEW
+   ======================================== */
+
+#services-preview {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+#services-preview > img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 35px;
+}
+
+#services-preview h2 {
+    color: #0b1f33;
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+#services-preview > div {
+    background-color: #f5f7fa;
+    padding: 25px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #1f6feb;
+}
+
+#services-preview h3 {
+    color: #0b1f33;
+    margin-bottom: 5px;
+}
+
+#services-preview a {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #1f6feb;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#services-preview a:hover {
+    background-color: #1558b0;
+}
+
+
+/* ========================================
+   WHY CHOOSE US
+   ======================================== */
+
+#why-choose-us {
+    background-color: #f5f7fa;
+    padding: 60px 5%;
+    text-align: center;
+}
+
+#why-choose-us h2 {
+    color: #0b1f33;
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+#why-choose-us ul {
+    list-style: none;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#why-choose-us li {
+    background-color: #ffffff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #e1e5ea;
+}
+
+
+/* ========================================
+   PREVIOUS PROJECTS
+   ======================================== */
+
+#previous-projects {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+#previous-projects > img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 35px;
+}
+
+#previous-projects h2 {
+    color: #0b1f33;
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+#previous-projects > div {
+    background-color: #f5f7fa;
+    padding: 25px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #e1e5ea;
+}
+
+#previous-projects h3 {
+    color: #0b1f33;
+    margin-bottom: 5px;
+}
+
+#previous-projects > a {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #1f6feb;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#previous-projects > a:hover {
+    background-color: #1558b0;
+}
+
+
+/* ========================================
+   CALL TO ACTION
+   ======================================== */
+
+#call-to-action {
+    background-color: #0b1f33;
+    color: #ffffff;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+#call-to-action h2 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+#call-to-action p {
+    margin-bottom: 25px;
+}
+
+#call-to-action a {
+    display: inline-block;
+    background-color: #1f6feb;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#call-to-action a:hover {
+    background-color: #1558b0;
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    background-color: #071522;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #6fc7ff;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    header h1 {
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    #hero-section {
+        min-height: 450px;
+    }
+
+    #hero-section > img {
+        height: 450px;
+    }
+
+    #hero-section h2 {
+        font-size: 2rem;
+    }
+
+    #hero-section p {
+        font-size: 1rem;
+    }
+
+    #hero-section > div {
+        width: 90%;
+        padding: 25px;
+    }
+
+    #introduction,
+    #services-preview,
+    #previous-projects {
+        width: 90%;
+    }
+}
