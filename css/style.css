@@ -1,39 +1,42 @@
+
 /* ========================================
    STS7 TECH SOLUTIONS
    Part 2 - CSS Styling
    ======================================== */
 
-/* I reset these first so the pages don't look different in different browsers. */
+/* I reset these first so the pages start from the same base in different browsers. */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
-    color: #172033;
-    background-color: #ffffff;
-    line-height: 1.6;
-}
-
-/* Main colours used throughout the website. */
 :root {
     --navy: #0b1f33;
     --navy-dark: #071522;
     --blue: #1f6feb;
     --blue-dark: #1557bd;
-    --light-blue: #f2f6fb;
-    --border: #d9e2ec;
+    --blue-soft: #eaf2ff;
+    --page-blue: #f3f7fc;
+    --border: #d8e2ee;
     --text: #172033;
-    --muted: #5e6b7a;
+    --muted: #5d6b7b;
     --white: #ffffff;
-    --shadow: 0 8px 24px rgba(11, 31, 51, 0.08);
+    --shadow: 0 10px 28px rgba(11, 31, 51, 0.08);
     --max-width: 1180px;
+}
+
+/* Smooth scrolling supports the simple navigation and keeps page movement natural. */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background-color: var(--white);
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 img {
@@ -52,23 +55,35 @@ a:focus-visible {
     text-decoration: none;
 }
 
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
 .container {
     width: 90%;
     max-width: var(--max-width);
     margin: 0 auto;
 }
 
+.narrow {
+    max-width: 900px;
+}
+
 /* =============================
    HEADER AND NAVIGATION
    ============================= */
 
+/* The dark navy header is the main brand colour used throughout the website. */
 .site-header {
-    background-color: var(--navy);
-    color: var(--white);
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    background-color: var(--navy);
+    color: var(--white);
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.16);
 }
 
 .header-inner {
@@ -76,30 +91,34 @@ a:focus-visible {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
+    gap: 28px;
 }
 
 .logo {
     display: flex;
     flex-direction: column;
-    line-height: 1;
     flex-shrink: 0;
+    line-height: 1;
+    color: var(--white);
+}
+
+.logo:hover,
+.logo:focus-visible {
+    color: var(--white);
 }
 
 .logo-main {
-    font-family: Poppins, Arial, sans-serif;
-    font-size: 1.8rem;
-    font-weight: 700;
+    font-size: 1.85rem;
+    font-weight: 800;
     letter-spacing: 1px;
-    color: var(--white);
 }
 
 .logo-sub {
     margin-top: 5px;
-    font-size: 0.58rem;
-    letter-spacing: 2px;
     color: #b9d8ff;
-    font-weight: 600;
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 2.2px;
 }
 
 .main-nav ul {
@@ -108,7 +127,7 @@ a:focus-visible {
     align-items: center;
     justify-content: flex-end;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 5px;
 }
 
 .main-nav a {
@@ -116,12 +135,12 @@ a:focus-visible {
     padding: 10px 13px;
     border-radius: 7px;
     color: var(--white);
-    font-weight: 600;
     font-size: 0.93rem;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    font-weight: 700;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
-/* The current page stays highlighted, while the mouse-over effect is smooth. */
+/* Active and hover states deliberately use the same blue so the interaction feels consistent. */
 .main-nav a.active,
 .main-nav a:hover,
 .main-nav a:focus-visible {
@@ -139,17 +158,17 @@ a:focus-visible {
 }
 
 /* =============================
-   HOME HERO
+   HERO
    ============================= */
 
 .hero {
     position: relative;
-    min-height: 560px;
+    min-height: 570px;
     overflow: hidden;
-    background-color: var(--navy);
-    color: var(--white);
     display: flex;
     align-items: center;
+    background-color: var(--navy);
+    color: var(--white);
 }
 
 .hero-image {
@@ -158,29 +177,29 @@ a:focus-visible {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 78% center;
+
+    /* The image is deliberately positioned more to the left so its large STS7 artwork does not sit behind the heading. */
+    object-position: 38% center;
 }
 
-/* Darker on the left so the heading is easier to read over the image. */
 .hero-overlay {
     position: absolute;
     inset: 0;
+
+    /* A consistent dark overlay keeps the text readable without hiding the technology image completely. */
     background: linear-gradient(
         90deg,
-        rgba(7, 21, 34, 0.97) 0%,
-        rgba(7, 21, 34, 0.90) 34%,
-        rgba(7, 21, 34, 0.50) 67%,
-        rgba(7, 21, 34, 0.20) 100%
+        rgba(7, 21, 34, 0.96) 0%,
+        rgba(7, 21, 34, 0.88) 38%,
+        rgba(7, 21, 34, 0.62) 72%,
+        rgba(7, 21, 34, 0.42) 100%
     );
 }
 
 .hero-content {
     position: relative;
     z-index: 1;
-    width: 90%;
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 90px 0;
+    padding: 100px 0;
 }
 
 .hero-copy {
@@ -188,19 +207,37 @@ a:focus-visible {
 }
 
 .hero h1,
-.hero h2 {
-    font-family: Poppins, Arial, sans-serif;
-    font-size: clamp(2.1rem, 5vw, 4rem);
-    line-height: 1.15;
-    margin-bottom: 22px;
-    color: var(--white);
+.page-hero h1,
+.section-heading h2,
+.feature-content h2,
+.cta h2 {
+    letter-spacing: -0.02em;
 }
 
-.hero p {
-    max-width: 600px;
-    font-size: 1.08rem;
+.hero h1 {
+    margin-bottom: 20px;
+    color: var(--white);
+    font-size: clamp(2.25rem, 5vw, 4rem);
+    line-height: 1.12;
+}
+
+.hero p:not(.eyebrow) {
+    max-width: 610px;
+    margin-bottom: 28px;
     color: #eef5ff;
-    margin-bottom: 30px;
+    font-size: 1.08rem;
+}
+
+.eyebrow {
+    margin-bottom: 10px;
+    color: #b9d8ff;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.eyebrow.dark {
+    color: var(--blue-dark);
 }
 
 .hero-actions {
@@ -210,17 +247,17 @@ a:focus-visible {
 }
 
 /* =============================
-   BUTTONS
+   BUTTONS AND LINKS
    ============================= */
 
 .btn {
     display: inline-block;
     padding: 12px 20px;
+    border: 2px solid transparent;
     border-radius: 7px;
     font-weight: 700;
-    border: 2px solid transparent;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .btn-primary {
@@ -233,18 +270,31 @@ a:focus-visible {
     background-color: var(--blue-dark);
     color: var(--white);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(31, 111, 235, 0.25);
+    box-shadow: 0 7px 18px rgba(31, 111, 235, 0.25);
 }
 
 .btn-outline {
-    border-color: rgba(255, 255, 255, 0.75);
+    border-color: rgba(255, 255, 255, 0.78);
     color: var(--white);
 }
 
 .btn-outline:hover,
 .btn-outline:focus-visible {
     background-color: var(--white);
+    border-color: var(--white);
     color: var(--navy);
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: 700;
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+    color: var(--blue);
+    text-decoration: underline;
 }
 
 /* =============================
@@ -252,115 +302,43 @@ a:focus-visible {
    ============================= */
 
 .section {
-    padding: 80px 0;
+    padding: 82px 0;
 }
 
 .section-light {
-    background-color: var(--light-blue);
+    background-color: var(--page-blue);
 }
 
 .section-heading {
-    max-width: 760px;
+    max-width: 780px;
     margin: 0 auto 42px;
     text-align: center;
 }
 
-.section-heading h2,
-.feature-content h2 {
-    font-family: Poppins, Arial, sans-serif;
-    color: var(--navy);
-    margin-bottom: 12px;
+.section-heading.left {
+    margin-left: 0;
+    text-align: left;
 }
 
 .section-heading h2 {
-    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin-bottom: 12px;
+    color: var(--navy);
+    font-size: clamp(1.85rem, 3vw, 2.55rem);
+    line-height: 1.2;
 }
 
-.section-heading p,
-.intro p,
-.card p,
-.feature-content p {
+.section-heading p:not(.eyebrow) {
     color: var(--muted);
 }
 
 .intro {
-    text-align: center;
+    padding-bottom: 70px;
 }
-
-.intro p {
-    max-width: 850px;
-    margin: auto;
-}
-
-/* =============================
-   CARDS AND GRIDS
-   ============================= */
-
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.card {
-    background-color: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 28px;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    border-color: #a9c8f5;
-    box-shadow: 0 14px 30px rgba(11, 31, 51, 0.12);
-}
-
-.card h3 {
-    font-family: Poppins, Arial, sans-serif;
-    color: var(--navy);
-    margin-bottom: 10px;
-    font-size: 1.15rem;
-}
-
-.service-card {
-    border-top: 4px solid var(--blue);
-}
-
-.project-card {
-    padding: 0;
-    overflow: hidden;
-}
-
-.project-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
-
-.project-card-content {
-    padding: 25px;
-}
-
-.service-icon {
-    width: 58px;
-    height: 58px;
-    object-fit: contain;
-    margin-bottom: 18px;
-    padding: 10px;
-    background-color: #eaf2ff;
-    border-radius: 10px;
-}
-
-/* =============================
-   SPLIT SECTIONS
-   ============================= */
 
 .feature {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 50px;
     align-items: center;
 }
 
@@ -373,11 +351,90 @@ a:focus-visible {
 }
 
 .feature-content h2 {
-    font-size: 2rem;
+    margin-bottom: 14px;
+    color: var(--navy);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    line-height: 1.2;
 }
 
 .feature-content p {
     margin-bottom: 20px;
+    color: var(--muted);
+}
+
+/* =============================
+   CARDS AND GRIDS
+   ============================= */
+
+.card-grid {
+    display: grid;
+    gap: 24px;
+}
+
+.three-columns {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.two-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card {
+    overflow: hidden;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #a9c8f5;
+    box-shadow: 0 15px 32px rgba(11, 31, 51, 0.12);
+}
+
+.card-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card h3 {
+    margin-bottom: 9px;
+    color: var(--navy);
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+
+.card p {
+    color: var(--muted);
+}
+
+.service-card {
+    border-top: 4px solid var(--blue);
+}
+
+.numbered-card {
+    position: relative;
+    padding: 30px;
+}
+
+.numbered-card .number {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: var(--blue);
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.project-grid .card-body {
+    min-height: 210px;
 }
 
 /* =============================
@@ -386,76 +443,52 @@ a:focus-visible {
 
 .reasons {
     max-width: 900px;
-    margin: auto;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
 }
 
 .reason {
+    padding: 19px 22px;
     background-color: var(--white);
     border: 1px solid var(--border);
     border-radius: 9px;
-    padding: 18px 22px;
-    font-weight: 600;
+    color: var(--text);
+    font-weight: 700;
     text-align: center;
-    transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+    transition: background-color 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
 }
 
 .reason:hover,
 .reason:focus-within {
-    background-color: #eaf2ff;
+    background-color: var(--blue-soft);
+    border-color: #9ec3f5;
     transform: translateY(-3px);
-    border-color: var(--blue);
 }
 
 /* =============================
-   OTHER PAGE TOP BANNER
+   INNER PAGE BANNER
    ============================= */
 
 .page-hero {
+    padding: 68px 0;
     background-color: var(--navy);
     color: var(--white);
-    padding: 65px 0;
     text-align: center;
 }
 
 .page-hero h1 {
-    font-family: Poppins, Arial, sans-serif;
-    font-size: clamp(2rem, 4vw, 3rem);
     margin-bottom: 10px;
+    color: var(--white);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
 }
 
-.page-hero p {
+.page-hero p:not(.eyebrow) {
+    max-width: 720px;
+    margin: 0 auto;
     color: #d9e8f8;
-    max-width: 700px;
-    margin: auto;
-}
-
-/* =============================
-   LISTS
-   ============================= */
-
-.check-list {
-    list-style: none;
-    display: grid;
-    gap: 12px;
-}
-
-.check-list li {
-    position: relative;
-    padding: 15px 18px 15px 45px;
-    background-color: var(--light-blue);
-    border-left: 4px solid var(--blue);
-    border-radius: 7px;
-}
-
-.check-list li::before {
-    content: "✓";
-    position: absolute;
-    left: 17px;
-    color: var(--blue);
-    font-weight: 700;
 }
 
 /* =============================
@@ -463,18 +496,18 @@ a:focus-visible {
    ============================= */
 
 .form-wrapper {
-    max-width: 850px;
-    margin: auto;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 36px;
     background-color: var(--white);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 35px;
     box-shadow: var(--shadow);
 }
 
 .form-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
 }
 
@@ -489,13 +522,13 @@ a:focus-visible {
 }
 
 .form-group label {
-    font-weight: 700;
     color: var(--navy);
+    font-weight: 700;
 }
 
 .form-group input,
-.form-group textarea,
-.form-group select {
+.form-group select,
+.form-group textarea {
     width: 100%;
     padding: 12px 13px;
     border: 1px solid #cbd5e1;
@@ -503,8 +536,6 @@ a:focus-visible {
     background-color: var(--white);
     color: var(--text);
     outline: none;
-    font: inherit;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .form-group textarea {
@@ -513,10 +544,10 @@ a:focus-visible {
 }
 
 .form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
+.form-group select:focus,
+.form-group textarea:focus {
     border-color: var(--blue);
-    box-shadow: 0 0 0 3px rgba(31, 111, 235, 0.12);
+    box-shadow: 0 0 0 3px rgba(31, 111, 235, 0.13);
 }
 
 .form-note {
@@ -526,35 +557,55 @@ a:focus-visible {
 }
 
 /* =============================
-   CONTACT PAGE
+   CONTACT
    ============================= */
 
 .contact-grid {
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
-    gap: 30px;
+    gap: 34px;
+    align-items: start;
 }
 
 .contact-info {
     display: grid;
-    gap: 15px;
+    gap: 14px;
 }
 
-.contact-item {
-    background-color: var(--light-blue);
+.contact-item,
+.location-card {
+    padding: 20px;
+    background-color: var(--page-blue);
     border: 1px solid var(--border);
     border-radius: 9px;
-    padding: 20px;
 }
 
-.contact-item h3 {
-    font-family: Poppins, Arial, sans-serif;
-    color: var(--navy);
+.contact-item h3,
+.location-card h3 {
     margin-bottom: 5px;
+    color: var(--navy);
 }
 
-.contact-item p {
+.contact-item p,
+.location-card p {
     color: var(--muted);
+}
+
+.location-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.location-card {
+    background-color: var(--white);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.location-card:hover {
+    transform: translateY(-3px);
+    border-color: #a9c8f5;
+    box-shadow: var(--shadow);
 }
 
 /* =============================
@@ -562,58 +613,81 @@ a:focus-visible {
    ============================= */
 
 .cta {
+    padding: 78px 0;
     background-color: var(--navy);
     color: var(--white);
     text-align: center;
-    padding: 75px 0;
 }
 
 .cta h2 {
-    font-family: Poppins, Arial, sans-serif;
-    font-size: clamp(1.8rem, 3vw, 2.5rem);
     margin-bottom: 12px;
+    color: var(--white);
+    font-size: clamp(1.85rem, 3vw, 2.55rem);
+    line-height: 1.2;
 }
 
-.cta p {
-    color: #d9e8f8;
+.cta p:not(.eyebrow) {
     margin-bottom: 25px;
+    color: #d9e8f8;
 }
 
 .site-footer {
     background-color: var(--navy-dark);
     color: var(--white);
-    padding: 35px 0;
-    text-align: center;
 }
 
-.site-footer p {
+.footer-inner {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 30px;
+    padding: 38px 0 30px;
+}
+
+.footer-inner p {
+    margin: 4px 0;
     color: #d7e0ea;
-    margin: 5px 0;
 }
 
-.site-footer a {
+.footer-inner a {
     color: #b9d8ff;
 }
 
-/* Keyboard users can still clearly see where they are. */
+.footer-brand {
+    color: var(--white) !important;
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.footer-bottom {
+    padding: 16px 0 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #b9c6d3;
+    font-size: 0.9rem;
+}
+
+/* Keyboard users get a visible focus indicator on interactive elements. */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
+select:focus-visible,
+textarea:focus-visible {
     outline: 3px solid rgba(31, 111, 235, 0.45);
     outline-offset: 2px;
 }
 
 /* =============================
-   TABLET
+   RESPONSIVE TABLET
    ============================= */
 
 @media (max-width: 900px) {
     .header-inner {
         flex-direction: column;
         justify-content: center;
-        padding: 18px 0;
+        padding: 17px 0;
     }
 
     .main-nav ul {
@@ -624,8 +698,12 @@ select:focus-visible {
         min-height: 520px;
     }
 
-    .card-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .hero-image {
+        object-position: 34% center;
+    }
+
+    .three-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .feature,
@@ -636,49 +714,60 @@ select:focus-visible {
     .feature-image {
         height: 320px;
     }
+
+    .footer-inner {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 /* =============================
-   MOBILE
+   RESPONSIVE MOBILE
    ============================= */
 
 @media (max-width: 650px) {
-    .container,
-    .hero-content {
+    .container {
         width: 92%;
     }
 
     .section {
-        padding: 55px 0;
+        padding: 58px 0;
+    }
+
+    .header-inner {
+        align-items: center;
+    }
+
+    .main-nav ul {
+        gap: 3px;
     }
 
     .main-nav a {
         padding: 8px 9px;
-        font-size: 0.84rem;
+        font-size: 0.82rem;
     }
 
     .hero {
-        min-height: 600px;
+        min-height: 610px;
     }
 
+    /* On small screens the image is pushed further left and the overlay becomes more uniform for readability. */
     .hero-image {
-        object-position: 76% center;
+        object-position: 32% center;
     }
 
     .hero-overlay {
         background: linear-gradient(
             90deg,
-            rgba(7, 21, 34, 0.94),
-            rgba(7, 21, 34, 0.72)
+            rgba(7, 21, 34, 0.95),
+            rgba(7, 21, 34, 0.78)
         );
     }
 
     .hero-content {
-        padding: 65px 0;
+        padding: 70px 0;
     }
 
-    .hero h1,
-    .hero h2 {
+    .hero h1 {
         font-size: 2.25rem;
     }
 
@@ -687,9 +776,11 @@ select:focus-visible {
         align-items: flex-start;
     }
 
-    .card-grid,
+    .three-columns,
+    .two-columns,
     .reasons,
-    .form-grid {
+    .form-grid,
+    .location-grid {
         grid-template-columns: 1fr;
     }
 
@@ -698,16 +789,24 @@ select:focus-visible {
     }
 
     .form-wrapper {
-        padding: 22px;
+        padding: 23px;
     }
 
     .feature-image {
-        height: 250px;
+        height: 260px;
+    }
+
+    .card-image {
+        height: 205px;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
     }
 }
 
-/* Small helper used for centred buttons below cards. */
+/* This keeps button rows centred where the wireframe calls for a clear next step. */
 .text-center {
-    text-align: center;
     margin-top: 30px;
+    text-align: center;
 }
