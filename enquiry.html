@@ -1,155 +1,250 @@
 <!DOCTYPE html>
-<html>
+
+<!-- DOCTYPE refers to the document type declaration -->
+
+<html lang="en">
 
 <head>
-    <!-- Head contains meta information and the page title -->
-    <title>Salv-7 Tech Solutions</title>
+
+    <!-- Head contains information about the webpage -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Salv-7 Tech Solutions | Enquiry</title>
 
     <!-- External CSS stylesheet -->
+
     <link rel="stylesheet" href="css/style.css">
+
 </head>
+
 
 <body>
 
+    <!-- HEADER -->
+
     <header>
 
-        <div>
+        <div class="header-container">
+
             <h1>STS7</h1>
+
         </div>
 
+
+        <!-- NAVIGATION -->
+
         <nav>
+
             <ul>
+
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="index.html">
+                        Home
+                    </a>
                 </li>
 
                 <li>
-                    <a href="about.html">About Us</a>
+                    <a href="about.html">
+                        About Us
+                    </a>
                 </li>
 
                 <li>
-                    <a href="services.html">Services</a>
+                    <a href="services.html">
+                        Services
+                    </a>
                 </li>
 
                 <li>
-                    <a href="projects.html">Previous Projects</a>
+                    <a href="projects.html">
+                        Previous Projects
+                    </a>
                 </li>
 
                 <li>
-                    <a href="enquiry.html">Enquiry</a>
+                    <a href="enquiry.html" class="active">
+                        Enquiry
+                    </a>
                 </li>
 
                 <li>
-                    <a href="contact.html">Contact Us</a>
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
                 </li>
+
             </ul>
+
         </nav>
 
     </header>
 
 
+    <!-- MAIN CONTENT -->
+
     <main>
 
-        <section id="enquiry-introduction">
-            <img src="images/project-generic.jpg" alt="Technology project enquiry">
 
-            <h2>Make an Enquiry</h2>
+        <!-- PAGE TITLE -->
+
+        <section class="page-title">
+
+            <h2>Request a Quote</h2>
 
             <p>
-                Tell STS7 about the technology service you need and
-                provide some information about your project.
+                Tell us about your technology requirements.
             </p>
 
         </section>
 
 
-        <section id="enquiry-form">
+        <!-- ENQUIRY FORM -->
 
-            <form>
+        <section class="page-section">
 
-                <div>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name">
-                </div>
+            <div class="form-container">
 
-
-                <div>
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email">
-                </div>
+                <form>
 
 
-                <div>
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
+                    <!-- Name -->
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                        >
+
+                    </div>
 
 
-                <div>
-                    <label for="service">Service Required:</label>
+                    <!-- Email -->
 
-                    <select id="service" name="service">
+                    <div class="form-group">
 
-                        <option value="">Select a service</option>
+                        <label for="email">
+                            Email Address
+                        </label>
 
-                        <option value="website-development">
-                            Website Development
-                        </option>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                        >
 
-                        <option value="software-development">
-                            Software Development
-                        </option>
-
-                        <option value="computer-repairs">
-                            Computer Repairs
-                        </option>
-
-                        <option value="networking">
-                            Networking
-                        </option>
-
-                        <option value="it-support">
-                            IT Support
-                        </option>
-
-                        <option value="technology-consulting">
-                            Technology Consulting
-                        </option>
-
-                    </select>
-                </div>
+                    </div>
 
 
-                <div>
-                    <label for="message">Project Description:</label>
+                    <!-- Service -->
 
-                    <textarea id="message" name="message"></textarea>
-                </div>
+                    <div class="form-group">
+
+                        <label for="service">
+                            Service Required
+                        </label>
+
+                        <select
+                            id="service"
+                            name="service"
+                            required
+                        >
+
+                            <option value="">
+                                Select a service
+                            </option>
+
+                            <option value="website-development">
+                                Website Development
+                            </option>
+
+                            <option value="software-development">
+                                Software Development
+                            </option>
+
+                            <option value="it-support">
+                                IT Support
+                            </option>
+
+                            <option value="computer-repairs">
+                                Computer Repairs
+                            </option>
+
+                            <option value="networking">
+                                Networking Services
+                            </option>
+
+                        </select>
+
+                    </div>
 
 
-                <div>
-                    <label for="budget">Budget Range:</label>
+                    <!-- Project details -->
 
-                    <input type="text" id="budget" name="budget">
-                </div>
+                    <div class="form-group">
+
+                        <label for="message">
+                            Project Details
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Tell us what you need..."
+                            required
+                        ></textarea>
+
+                    </div>
 
 
-                <div>
-                    <button type="submit">Submit Enquiry</button>
-                </div>
+                    <!-- Submit button -->
 
-            </form>
+                    <button
+                        type="submit"
+                        class="button form-button"
+                    >
+                        Submit Enquiry
+                    </button>
+
+
+                </form>
+
+            </div>
 
         </section>
 
     </main>
 
 
-    <footer>
-        <p>Salv-7 Tech Solutions</p>
+    <!-- FOOTER -->
 
-        <p>&copy; 2026 Salv-7 Tech Solutions</p>
+    <footer>
+
+        <p>
+            Salv-7 Tech Solutions
+        </p>
+
+        <p>
+            Email: info@salv7techsolutions.co.za
+        </p>
+
+        <p>
+            &copy; 2026 Salv-7 Tech Solutions
+        </p>
+
     </footer>
+
 
 </body>
 
