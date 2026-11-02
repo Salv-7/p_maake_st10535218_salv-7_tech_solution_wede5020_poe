@@ -387,7 +387,7 @@ Git is used to:
 
 # Part 1 Details
 
-Part 01 focused on building the foundation of the website using HTML, organising the project files and establishing the GitHub repository.
+Part 1 focused on building the foundation of the website using HTML, organising the project files and establishing the GitHub repository.
 
 ## Part 1 Completed Work
 
@@ -517,3 +517,76 @@ The Independent Institute of Education (IIE). 2026. *Web Development (Introducti
 Netlify. 2026. *Pricing.* Available at: https://www.netlify.com/pricing/ [Accessed 12 August 2026].
 
 Domains.co.za. 2026. *Domain Registration.* Available at: https://www.domains.co.za/domain-registration [Accessed 12 August 2026].
+
+
+---
+
+# Part 3 – JavaScript, Dynamic Content and SEO
+
+## Interactive JavaScript Features
+
+- A shared external `js/script.js` file is loaded with `defer` on all six pages.
+- The navigation includes a responsive menu toggle for smaller screens.
+- The About Us page includes an accessible FAQ accordion using `aria-expanded` and `aria-controls`.
+- The Previous Projects page loads portfolio entries from `data/projects.json` using the Fetch API. Visitors can search, filter by category and sort project names.
+- Project images open in an accessible native HTML `<dialog>` lightbox. Keyboard activation is supported for dynamically loaded project images.
+- The Contact page uses Leaflet and OpenStreetMap to show the town of Tzaneen. The marker represents the town centre area, not an exact STS7 street address.
+- Scroll reveal effects respect the visitor's `prefers-reduced-motion` setting.
+- Project enquiry links can preselect a matching service when the form is opened with a supported query parameter.
+
+## Forms and Submission Behaviour
+
+The Enquiry and Contact forms use HTML required fields and browser validation. After validation, JavaScript prepares an email using the visitor's default email application (`mailto:`). The visitor must review and press Send in that application. **The website does not currently send or store form submissions on a server.** A secure form-processing endpoint must be configured if automatic online submission is required.
+
+## Search Engine Optimisation
+
+- Each page has its own descriptive title and meta description.
+- Open Graph title, description, type and site-name metadata are included.
+- Heading hierarchy, descriptive image alternative text and internal navigation links are retained.
+- `robots.txt` and `sitemap.xml` are included. Their example domain must be replaced with the actual Netlify/custom domain before deployment.
+- Image loading is deferred where appropriate to reduce initial page loading work.
+
+## Part 2 Feedback Addressed / Continued Improvements
+
+The Part 2 rubric awarded 95/100. The main opportunities identified were typography consistency (2/5), navigation adjustments (4/5) and references (4/5). Part 3 continues to use the established STS7 visual identity and improves small-screen navigation and interaction controls. Typography is kept consistent through shared CSS rules; final visual review at desktop, tablet and mobile sizes remains part of the pre-submission checklist.
+
+## Part 3 Changelog
+
+| Date | File(s) | Change |
+|---|---|---|
+| 02 November 2026 | `js/script.js` | Added shared JavaScript for mobile navigation, FAQ accordion, dynamic portfolio, search/filter/sort, lightbox, form validation/email hand-off, query-string service selection, map initialisation and reduced-motion-aware reveal effects. |
+| 02 November 2026 | `data/projects.json` | Added structured sample portfolio data for dynamic loading. All entries are identified as sample project concepts, not verified client work. |
+| 02 November 2026 | `projects.html` | Replaced hard-coded portfolio cards with a dynamic project region and search, category filter and sort controls. |
+| 02 November 2026 | `about.html` | Added an accessible FAQ accordion and clarified the business description. |
+| 02 November 2026 | `contact.html` | Added a Leaflet/OpenStreetMap map centred on Tzaneen and JavaScript-assisted form validation/email hand-off. |
+| 02 November 2026 | `enquiry.html` | Added JavaScript-assisted validation and an email hand-off for quotation requests. |
+| 02 November 2026 | All HTML pages | Added shared deferred JavaScript and Open Graph metadata; retained unique page titles and descriptions. |
+| 02 November 2026 | `css/style.css` | Added styles for dynamic filters, FAQ accordion, lightbox, map, mobile navigation and reduced-motion-aware reveal effects. |
+| 02 November 2026 | `robots.txt`, `sitemap.xml` | Added search engine crawler guidance and a six-page sitemap. Replace example domain before deployment. |
+
+## Running and Testing the Website
+
+1. Extract the project folder.
+2. Open the folder in Visual Studio Code.
+3. Start the website with Live Server or another local HTTP server. The dynamic portfolio uses `fetch()` and may not load when opening `projects.html` directly with a `file://` URL.
+4. Test all six navigation links at desktop and mobile widths.
+5. On Previous Projects, test a search term, each category, both sort orders and the lightbox.
+6. On About Us, open and close each FAQ item using mouse and keyboard.
+7. On Contact, confirm that the Tzaneen map loads when internet access is available.
+8. Submit both forms with missing and valid information. Confirm that the browser blocks invalid entries and that a mail application opens for valid entries.
+9. Replace the example domain in `robots.txt` and `sitemap.xml` after deployment.
+
+## External Services and Limitations
+
+- Leaflet 1.9.4 and OpenStreetMap tiles are loaded from their public CDNs; an internet connection is required for the map.
+- Project JSON loading requires a local web server or hosted HTTP/HTTPS site.
+- Form submissions are not stored or transmitted automatically. The current implementation prepares an email for the visitor to send.
+- The sitemap host is intentionally a placeholder until the final deployed URL is known.
+
+## References
+
+- Mozilla. (n.d.). *Using the Fetch API*. MDN Web Docs. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch (Accessed: 2 November 2026).
+- Mozilla. (n.d.). *HTMLDialogElement: showModal() method*. MDN Web Docs. Available at: https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/showModal (Accessed: 2 November 2026).
+- Leaflet. (n.d.). *Leaflet – a JavaScript library for interactive maps*. Available at: https://leafletjs.com/ (Accessed: 2 November 2026).
+- OpenStreetMap contributors. (n.d.). *OpenStreetMap*. Available at: https://www.openstreetmap.org/ (Accessed: 2 November 2026).
+- The Independent Institute of Education. (2026). *Web Development (Introduction) WEDE5020: Portfolio of Evidence (PoE).* Johannesburg: The Independent Institute of Education.
