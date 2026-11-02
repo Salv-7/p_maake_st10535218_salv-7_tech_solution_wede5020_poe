@@ -1,4 +1,4 @@
-/* I should reset these first so the pages start from the same base in different browsers. */
+/* I reset these first so the pages start from the same base in different browsers. */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -802,3 +802,42 @@ textarea:focus-visible {
     margin-top: 30px;
     text-align: center;
 }
+
+/* Part 3 enhancements: controls, accessible interactions and dynamic content. */
+.project-tools { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin:0 0 28px; padding:22px; background:#f3f7fb; border-radius:12px; }
+.project-tools .form-group { margin:0; }
+.project-tools input,.project-tools select { width:100%; min-height:44px; padding:10px 12px; border:1px solid #b9c8d8; border-radius:6px; font:inherit; }
+.nav-toggle { display:none; border:1px solid currentColor; background:transparent; color:inherit; border-radius:6px; padding:8px 12px; font:inherit; cursor:pointer; }
+.faq-list { max-width:850px; margin:0 auto; }
+.faq-item { border-bottom:1px solid #d5dfeb; padding:8px 0; }
+.faq-item h3 { margin:0; }
+.faq-item button { width:100%; text-align:left; padding:15px 42px 15px 14px; border:0; background:transparent; color:inherit; font:600 1rem/1.5 'Poppins',sans-serif; cursor:pointer; position:relative; }
+.faq-item button::after { content:'+'; position:absolute; right:15px; font-size:1.4rem; }
+.faq-item button[aria-expanded="true"]::after { content:'−'; }
+.faq-item [id] { padding:0 14px 14px; }
+.sts7-map { height:360px; width:100%; border-radius:12px; border:1px solid #d5dfeb; z-index:0; }
+.lightbox-dialog { width:min(900px,92vw); max-width:92vw; border:0; border-radius:12px; padding:18px; background:#071a33; color:white; box-shadow:0 20px 60px #0008; }
+.lightbox-dialog::backdrop { background:#061326cc; }
+.lightbox-dialog img { display:block; max-width:100%; max-height:72vh; margin:28px auto 10px; object-fit:contain; }
+.lightbox-dialog p { text-align:center; margin:8px 0 0; }
+.lightbox-close { position:absolute; top:8px; right:12px; border:0; border-radius:50%; width:36px; height:36px; font-size:1.5rem; cursor:pointer; }
+.lightbox-trigger { cursor:zoom-in; }
+.form-status { color:#0b5b39; font-weight:600; }
+.reveal { opacity:0; transform:translateY(14px); transition:opacity .45s ease,transform .45s ease; }
+.reveal.is-visible { opacity:1; transform:none; }
+@media (max-width:800px) {
+ .project-tools { grid-template-columns:1fr; }
+ .nav-toggle { display:inline-block; margin-left:auto; }
+ .header-inner { flex-wrap:wrap; }
+ .main-nav { display:none; width:100%; }
+ .main-nav.nav-open { display:block; }
+ .main-nav ul { flex-direction:column; gap:8px; padding:14px 0; }
+}
+@media (prefers-reduced-motion:reduce) { .reveal { opacity:1; transform:none; transition:none; } html:focus-within { scroll-behavior:auto; } }
+
+/* Consistent typography follows the approved STS7 proposal: Poppins headings, Open Sans body copy. */
+body { font-family: 'Open Sans', Arial, Helvetica, sans-serif; }
+h1, h2, h3, h4, .logo, .main-nav a, .btn, .eyebrow { font-family: 'Poppins', Arial, sans-serif; }
+h1, h2, h3, h4 { line-height: 1.25; }
+p, li, label, input, select, textarea { font-family: 'Open Sans', Arial, sans-serif; }
+:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; }
