@@ -58,3 +58,28 @@ document.addEventListener('DOMContentLoaded', () => {
     [search,filter,sort].filter(Boolean).forEach(el => el.addEventListener('input', render));
   }
 
+// 4. Gallery lightbox using the native dialog element.
+  let dialog = document.querySelector('#image-lightbox');
+  if (!dialog) {
+    dialog = document.createElement('dialog'); dialog.id = 'image-lightbox'; dialog.className = 'lightbox-dialog';
+    dialog.innerHTML = '<button type="button" class="lightbox-close" aria-label="Close image">×</button><img alt=""><p></p>';
+    document.body.append(dialog);
+  }
+  const openLightbox = img => { const big = dialog.querySelector('img'); big.src = img.dataset.full || img.src; big.alt = img.alt; dialog.querySelector('p').textContent = img.dataset.caption || img.alt; dialog.showModal(); };
+  document.addEventListener('click', e => { const img = e.target.closest('.lightbox-trigger'); if (img) openLightbox(img); });
+  document.addEventListener('keydown', e => { const img = e.target.closest?.('.lightbox-trigger'); if (img && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); openLightbox(img); } });
+  dialog.querySelector('.lightbox-close').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', e => { if (e.target === dialog) dialog.close(); });
+
+  // 5. Enquiry and contact forms: native constraints + accessible feedback + email hand-off.
+  document.querySelectorAll('form[data-email-form]').forEach(form => {
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const values = new FormData(form); const subject = form.dataset.emailForm === 'quote' ? 'STS7 quotation enquiry' : 'STS7 general enquiry';
+      const body = [...values.entries()].map(([key,value]) => `${key}: ${value}`).join('\n');
+      const status = form.querySelector('[role="status"]');
+      if (status) status.textContent = 'Your email application will open with the message prepared. Review it and press Send to submit your enquiry.';
+      window.location.href = `mailto:maakepholoso07@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  });
