@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.href = `mailto:maakepholoso07@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     });
   });
-  
+
   // 6. Read service selection from project CTA query string.
   const serviceSelect = document.querySelector('#service');
   if (serviceSelect) {
@@ -92,4 +92,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const match = [...serviceSelect.options].find(o => o.value.toLowerCase() === requested.toLowerCase() || o.text.toLowerCase() === requested.toLowerCase());
       if (match) serviceSelect.value = match.value;
     }
+  }
+
+  // 7. Leaflet map, centred on the town of Tzaneen (not a fabricated street address).
+  const mapElement = document.querySelector('#sts7-map');
+  if (mapElement && window.L) {
+    const map = L.map(mapElement).setView([-23.8332, 30.1635], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors', maxZoom: 19 }).addTo(map);
+    L.marker([-23.8332, 30.1635]).addTo(map).bindPopup('<strong>STS7</strong><br>Tzaneen, Limpopo, South Africa').openPopup();
   }
