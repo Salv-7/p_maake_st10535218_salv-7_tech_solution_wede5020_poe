@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+
+Sitemap: https://salv-7.github.io/p_maake_st10535218_salv-7_tech_solution_wede5020_poe/sitemap.xml
