@@ -1,4 +1,4 @@
-/* I reset these first so the pages start from the same base in different browsers. */
+/* I should reset these first so the pages start from the same base in different browsers. */
 * {
     box-sizing: border-box;
     margin: 0;
