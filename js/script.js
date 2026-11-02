@@ -12,3 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
       toggle.setAttribute('aria-expanded', String(open)); nav.classList.toggle('nav-open', open);
     });
   }
+
+    // 2. Accessible FAQ accordion.
+  document.querySelectorAll('[data-accordion] button').forEach(button => {
+    button.addEventListener('click', () => {
+      const panel = document.getElementById(button.getAttribute('aria-controls'));
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!expanded));
+      if (panel) panel.hidden = expanded;
+    });
+  });
