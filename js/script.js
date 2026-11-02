@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-    // 2. Accessible FAQ accordion.
+  // 2. Accessible FAQ accordion.
   document.querySelectorAll('[data-accordion] button').forEach(button => {
     button.addEventListener('click', () => {
       const panel = document.getElementById(button.getAttribute('aria-controls'));
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     [search,filter,sort].filter(Boolean).forEach(el => el.addEventListener('input', render));
   }
 
-// 4. Gallery lightbox using the native dialog element.
+  // 4. Gallery lightbox using the native dialog element.
   let dialog = document.querySelector('#image-lightbox');
   if (!dialog) {
     dialog = document.createElement('dialog'); dialog.id = 'image-lightbox'; dialog.className = 'lightbox-dialog';
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors', maxZoom: 19 }).addTo(map);
     L.marker([-23.8332, 30.1635]).addTo(map).bindPopup('<strong>STS7</strong><br>Tzaneen, Limpopo, South Africa').openPopup();
   }
-  
+
   // 8. Subtle scroll reveal; disabled when reduced motion is requested.
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => entries.forEach(entry => {
