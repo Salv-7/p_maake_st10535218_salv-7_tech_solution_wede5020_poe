@@ -101,3 +101,12 @@ document.addEventListener('DOMContentLoaded', () => {
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors', maxZoom: 19 }).addTo(map);
     L.marker([-23.8332, 30.1635]).addTo(map).bindPopup('<strong>STS7</strong><br>Tzaneen, Limpopo, South Africa').openPopup();
   }
+  
+  // 8. Subtle scroll reveal; disabled when reduced motion is requested.
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
+    }), { threshold: 0.12 });
+    document.querySelectorAll('.card, .feature, .section-heading').forEach(el => { el.classList.add('reveal'); observer.observe(el); });
+  }
+});
