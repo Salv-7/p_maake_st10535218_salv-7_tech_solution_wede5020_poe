@@ -83,3 +83,13 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.href = `mailto:maakepholoso07@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     });
   });
+  
+  // 6. Read service selection from project CTA query string.
+  const serviceSelect = document.querySelector('#service');
+  if (serviceSelect) {
+    const requested = new URLSearchParams(window.location.search).get('service');
+    if (requested) {
+      const match = [...serviceSelect.options].find(o => o.value.toLowerCase() === requested.toLowerCase() || o.text.toLowerCase() === requested.toLowerCase());
+      if (match) serviceSelect.value = match.value;
+    }
+  }
