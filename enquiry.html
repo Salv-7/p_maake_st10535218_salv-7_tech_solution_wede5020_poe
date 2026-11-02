@@ -2,12 +2,20 @@
 <!-- Quote/enquiry form for visitors who want to ask about an STS7 service. -->
 <html lang="en">
 <head>
-    <!-- Basic page information and the shared external stylesheet. *-->
+    <!-- Basic page information and the shared external stylesheet. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Request a quotation from Salv-7 Tech Solutions for website, software, repair, networking or IT services.">
     <title>Request a Quote | Salv-7 Tech Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <meta property="og:site_name" content="Salv-7 Tech Solutions">
+    <meta property="og:title" content="Request a Quote | Salv-7 Tech Solutions">
+    <meta property="og:description" content="Affordable and reliable technology solutions in Tzaneen, Limpopo.">
+    <meta property="og:type" content="website">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -52,7 +60,7 @@
                         <p>Complete the form below with enough information for STS7 to understand your project.</p>
                     </div>
 
-                    <form action="#" method="post">
+                    <form data-email-form="quote">
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="name">Full Name</label>
@@ -94,7 +102,8 @@
                         </div>
 
                         <!-- This explains the current Part 2 scope without pretending the form has backend processing. -->
-                        <p class="form-note">This front-end form is ready for connection to a secure form-processing service when the website is deployed.</p>
+                        <p class="form-note">After validation, your email application opens with the enquiry prepared. You must press Send to submit it.</p>
+                        <p class="form-status" role="status" aria-live="polite"></p>
                     </form>
                 </div>
             </div>
@@ -111,7 +120,7 @@
             </div>
             <div>
                 <p><strong>Email</strong></p>
-                <p><a href="mailto:info@salv7techsolutions.co.za">info@salv7techsolutions.co.za</a></p>
+                <p><a href="mailto:maakepholoso07@gmail.com">maakepholoso07@gmail.com</a></p>
             </div>
             <div>
                 <p><strong>Location</strong></p>
