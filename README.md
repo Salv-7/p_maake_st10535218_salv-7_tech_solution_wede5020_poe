@@ -387,7 +387,7 @@ Git is used to:
 
 # Part 1 Details
 
-Part 1 focused on building the foundation of the website using HTML, organising the project files and establishing the GitHub repository.
+Part 01 focused on building the foundation of the website using HTML, organising the project files and establishing the GitHub repository.
 
 ## Part 1 Completed Work
 
