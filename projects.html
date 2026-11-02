@@ -2,12 +2,20 @@
 <!-- Previous and sample projects page for STS7. -->
 <html lang="en">
 <head>
-    <!-- Basic page information and the shared external stylesheet.* -->
+    <!-- Basic page information and the shared external stylesheet. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="View previous and sample website, software and networking projects from Salv-7 Tech Solutions.">
     <title>Previous Projects | Salv-7 Tech Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <meta property="og:site_name" content="Salv-7 Tech Solutions">
+    <meta property="og:title" content="Previous Projects | Salv-7 Tech Solutions">
+    <meta property="og:description" content="Affordable and reliable technology solutions in Tzaneen, Limpopo.">
+    <meta property="og:type" content="website">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -52,42 +60,13 @@
                     <p>These examples show the types of technology solutions STS7 can provide.</p>
                 </div>
 
-                <div class="card-grid two-columns project-grid">
-                    <article class="card project-card">
-                        <img class="card-image" src="images/project-barber-shop.jpg" alt="Barber shop website project">
-                        <div class="card-body">
-                            <h3>Barber Shop Website</h3>
-                            <p>Website development with online enquiry functionality and responsive design.</p>
-                            <a class="btn btn-primary" href="enquiry.html">Enquire About a Website</a>
-                        </div>
-                    </article>
-
-                    <article class="card project-card">
-                        <img class="card-image" src="images/project-inventory-system.jpg" alt="Small business inventory system project">
-                        <div class="card-body">
-                            <h3>Small Business Inventory System</h3>
-                            <p>A sample software solution designed to help a small business manage inventory and keep track of products.</p>
-                            <a class="btn btn-primary" href="enquiry.html">Enquire About Software</a>
-                        </div>
-                    </article>
-
-                    <article class="card project-card">
-                        <img class="card-image" src="images/project-network-setup.jpg" alt="Local business network setup project">
-                        <div class="card-body">
-                            <h3>Local Business Network Setup</h3>
-                            <p>A sample networking solution designed to support connectivity for a local business.</p>
-                            <a class="btn btn-primary" href="enquiry.html">Enquire About Networking</a>
-                        </div>
-                    </article>
-
-                    <article class="card project-card">
-                        <img class="card-image" src="images/project-generic.jpg" alt="General technology project">
-                        <div class="card-body">
-                            <h3>General Technology Project</h3>
-                            <p>A general project example showing how STS7 can combine different technology services around a client's requirements.</p>
-                            <a class="btn btn-primary" href="enquiry.html">Discuss a Project</a>
-                        </div>
-                    </article>
+                <div class="project-tools" aria-label="Project search and filters">
+                    <div class="form-group"><label for="project-search">Search projects</label><input type="search" id="project-search" placeholder="Search by name or service"></div>
+                    <div class="form-group"><label for="project-filter">Filter by category</label><select id="project-filter"><option value="all">All categories</option><option>Website Development</option><option>Software Development</option><option>Networking</option><option>IT Support</option></select></div>
+                    <div class="form-group"><label for="project-sort">Sort projects</label><select id="project-sort"><option value="default">Featured order</option><option value="az">Name: A to Z</option><option value="za">Name: Z to A</option></select></div>
+                </div>
+                <div id="dynamic-projects" class="card-grid two-columns project-grid" aria-live="polite">
+                    <p class="form-note">Loading STS7 sample projects…</p>
                 </div>
             </div>
         </section>
@@ -116,7 +95,7 @@
             </div>
             <div>
                 <p><strong>Email</strong></p>
-                <p><a href="mailto:info@salv7techsolutions.co.za">info@salv7techsolutions.co.za</a></p>
+                <p><a href="mailto:maakepholoso07@gmail.com">maakepholoso07@gmail.com</a></p>
             </div>
             <div>
                 <p><strong>Location</strong></p>
