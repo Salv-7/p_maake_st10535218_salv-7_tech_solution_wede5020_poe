@@ -1,0 +1,6 @@
+[
+ {"title":"Barber Shop Website","category":"Website Development","description":"A sample responsive website concept with service information and an online enquiry journey for a local barber shop.","image":"images/project-barber-shop.jpg","alt":"Barber shop website sample project"},
+ {"title":"Small Business Inventory System","category":"Software Development","description":"A sample software concept to help a small business record products and monitor stock levels.","image":"images/project-inventory-system.jpg","alt":"Small business inventory system sample project"},
+ {"title":"Local Business Network Setup","category":"Networking","description":"A sample network setup concept designed to support reliable connectivity for a local business.","image":"images/project-network-setup.jpg","alt":"Local business network setup sample project"},
+ {"title":"Technology Support Workspace","category":"IT Support","description":"A sample support scenario showing how troubleshooting and practical IT guidance can assist users.","image":"images/project-generic.jpg","alt":"Technology support sample project"}
+]
